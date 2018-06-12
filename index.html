@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-cn" class="no-js">
+	<head>
+		<meta http-equiv="Content-Type">
+		<meta content="text/html; charset=utf-8">
+		<meta charset="utf-8">
+		<title>中国民生银行网络金融部招聘</title>	
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="format-detection" content="email=no">
+		<link rel="stylesheet" href="css/swiper.css">        
+		<link rel="stylesheet" type="text/css" href="css/animate.css" />
+		<link rel="stylesheet" type="text/css" href="css/loading.css" />
+		<link rel="stylesheet" type="text/css" href="css/app.css?v=1.0" />
+		<script src="js/swiper.animate1.0.2.min.js"></script>
+		<script src="js/swiper.js"></script>
+		<script src="js/jquery-1.10.1.min.js"></script>
+		<!-- <script src="js/wechat.js"></script> -->
+	</head>
+	<body>
+
+		<div class="loading" style="display:none;">
+			<img src="http://oss.szzbmy.com/rp2/apps/static/widget/loading/loading_afa04a3.gif" alt=""
+			class="loading-gif">
+			<!-- <p class="loading-percent">
+				<span id="loading-value">0</span><span>%</span>
+			</p> -->
+		</div>
+
+    	<div class="swiper-container">
+    		<div class="swiper-wrapper">
+		        <!-- Slides -->
+		        <div class="swiper-slide page1">
+		        	<ul>
+		        		<li class="ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s">14:30 签到入场</li>
+		        		<li class="ani" swiper-animate-effect="fadeInRightBig" swiper-animate-duration="1s" 
+		        			swiper-animate-delay="1s">14:55 全体合影</li>
+		        		<li class="ani" swiper-animate-effect="fadeInLeftBig" swiper-animate-duration="1s" 
+		        			swiper-animate-delay="2s">15:00 开场&介绍</li>
+		        		<li class="ani" swiper-animate-effect="fadeInRightBig" swiper-animate-duration="1s"
+		        			swiper-animate-delay="3s">15:30 产品分享</li>
+		        		<li class="ani" swiper-animate-effect="fadeInLeftBig" swiper-animate-duration="1s"
+		        			swiper-animate-delay="4s">16:00 抽奖&反馈</li>
+		        	</ul>
+		        </div>
+		        <div class="swiper-slide page1">
+		        	<div class="yuan ani" swiper-animate-effect="bounceInDown" swiper-animate-duration="2s"></div>
+		        	<img src="img/t1-text.png" class="ani" alt="" swiper-animate-effect="fadeInDown" swiper-animate-duration="1.5s">
+		        </div>
+		        <div class="swiper-slide page2">
+		        	<img src="img/t2-2.png" alt="" class="page2-img ani"
+		        		swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s">
+		        	<img src="img/t2-3.png" alt="" class="ani page2-text"
+		        		swiper-animate-effect="slideInLeft" swiper-animate-duration="1s">
+		        </div>
+		        <div class="swiper-slide page3">
+		        	<img src="img/t3-2.png" alt="" class="ani page3-text"
+		        		swiper-animate-effect="slideInRight">
+		        	<img src="img/t3-1.png" alt="" class="ani page3-img"
+		        		swiper-animate-effect="bounce" swiper-animate-duration="1.5s">
+		        </div>
+		        <div class="swiper-slide page4">
+		        	<img src="img/t4-1.png" alt="" class="ani page4-text1"
+		        		swiper-animate-effect="fadeInLeft">
+		        	<img src="img/t4-2.png" alt="" class="ani page4-text2"
+		        		swiper-animate-effect="slideInRight">
+		        	<img src="img/t4-3.png" alt="" class="ani page4-img"
+		        		swiper-animate-effect="bounceInUp" swiper-animate-duration="1.5s">
+		        </div>
+		    </div>
+
+    	</div>
+
+    	<div class="musicbtn rotate">
+    		<audio src="audio/001.mp3" id="media" loop preload></audio>
+    	</div>
+
+    	<img src="img/icon_up.png" alt="" class="animated infinite fadeOutUp icon-up">
+		
+		<script>
+
+			/*var count = 0;
+			var intervalId = window.setInterval(function(){
+				count++;
+				//$("#loading-value").text(count*15);
+				if(count > 5){
+					clearInterval(intervalId);
+					$(".loading").hide();
+					startSwiper();
+				}
+			},1000);*/
+
+			startSwiper();
+
+			function startSwiper(){
+				var mySwiper = new Swiper('.swiper-container', {
+					//autoplay: 5000,//可选选项，自动滑动
+					direction: 'vertical',
+					effect: 'flip',
+					preloadImages: false,
+					loop: true,
+					onInit: function(swiper){
+	   					swiperAnimateCache(swiper);
+	   					swiperAnimate(swiper);
+		  			},
+	   				onSlideChangeEnd: function(swiper){
+						swiperAnimate(swiper);
+	    			}	
+				});
+
+				$(".musicbtn").bind("click",function(){
+					var ele = $(this);
+					ele.toggleClass("rotate");
+					if(!ele.hasClass("rotate")){
+						$("#media")[0].pause();
+					}else{
+						$("#media")[0].play();
+					}
+				});
+
+			}
+
+			
+
+			
+			
+			var share_data = {
+			    'img_url': 'https://www.mszxyh.com/wapserver/outer/css/images/index/simple_bank.png',   // 选填，默认为空或者当前页面第一张图片
+			    'link': window.location.href,
+			    'desc': '感谢支持1',
+			    'title': '京东2016活动 H5-Boilerplate'
+			}
+
+			//wechat('friend', share_data);           // 朋友
+			//wechat('timeline', share_data);         // 朋友圈
+
+		</script>
+        
+	</body>
+    
+</html>

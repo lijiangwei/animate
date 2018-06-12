@@ -1,0 +1,108 @@
+html, body {
+	padding: 0;
+	margin: 0;
+	height: 100%;
+}
+.swiper-container {
+	width: 100%;
+	height: 100%;
+}
+.musicbtn {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	background: url("../img/normalmusic.svg") no-repeat center center;
+	background-size: 100% 100%;
+	width: 40px;height: 40px;
+	z-index: 1;
+}
+.rotate {
+	animation: rotote 1.2s linear infinite;
+}
+
+@-webkit-keyframes rotote {
+	0% {
+		transform: rotate(0);
+	}
+	100% {
+		transform: rotate(360deg);	
+	}
+}
+.icon-up {
+	position: absolute;width: 25px;z-index: 1;
+	bottom: 30px;
+	left: 50%;
+	margin-left: -12px;
+}
+.page1 {
+	background-color: #EDEDED;
+	background: url("../img/t1-bg.png") no-repeat;
+	background-size: cover;
+}
+.page1 .yuan {
+	background: url('../img/t1-yuan.png') no-repeat center center;
+	position: absolute;
+	height: 300px;width: 293px;
+	top: 50%;left: 50%;
+	margin-left: -147px;
+	margin-top: -150px;
+	border-radius: 150px;
+}
+.page1 img {
+	width: 320px;
+	position: absolute;
+	top: 50%;left: 50%;
+	margin-left: -160px;
+	margin-top: -99px;
+}
+.page2 {
+	background-color: #9261BF;
+	background: url("../img/t2-bg.png") no-repeat;
+	background-size: cover;
+}
+.page2-img {
+	position: absolute;top: 40px;left: 50%;
+	width: 78px;margin-left: -39px;
+}
+.page2-text {
+	position: absolute;bottom: 15%;left: 50%;
+	width: 145px;margin-left: -72px;
+}
+.page3 {
+	background-color: #FFBB4D;
+	background: url("../img/t3-bg.png") no-repeat;
+	background-size: cover;
+}
+.page3-text {
+	position: absolute;top: 10%;left: 50%;
+	width: 132px;margin-left: -66px;
+}
+.page3-img {
+	position: absolute;bottom: 10%;left: 50%;
+	width: 214px;margin-left: -107px;
+}
+.page4 {
+	background-color: #F94848;
+}
+.page4-text1 {
+	position: absolute;top: 13%;left: 50%;
+	width: 268px;margin-left: -134px;
+}
+.page4-text2 {
+	position: absolute;top: 40%;left: 50%;
+	width: 266.5px;margin-left: -133px;
+}
+.page4-img {
+	position: absolute;bottom: 10%;left: 50%;
+	width: 320px;margin-left: -160px;
+}
+ul {
+	padding: 0;margin: 0;
+	position: absolute;
+    top: 20%;
+    padding-left: 120px;
+}
+ul > li {
+	list-style-type: none;
+	padding: 10px 0;
+}
